@@ -22,7 +22,7 @@ public_folder: "/images/uploads"
 
 # Aktifkan editorial workflow (draft → review → publish)
 # Hapus atau set false jika tidak ingin alur review
-publish_mode: editorial_workflow
+publish_mode: simple
 
 # Tampilkan preview link ke website
 site_url: https://kasepuhan-citorek.netlify.app  # Ganti dengan domain Anda
