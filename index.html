@@ -5,28 +5,49 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Kasepuhan Adat Citorek — Menjaga Adat, Merawat Alam, Mewariskan Budaya</title>
 <meta name="description" content="Website resmi Kasepuhan Adat Citorek. Informasi sejarah, budaya, tradisi, pertanian, wisata budaya, dan publikasi resmi.">
+<meta name="keywords" content="Kasepuhan Adat Citorek, Budaya Sunda, Adat Kasepuhan, Wisata Budaya, Seren Taun">
 <meta property="og:title" content="Kasepuhan Adat Citorek">
 <meta property="og:description" content="Menjaga Adat, Merawat Alam, Mewariskan Budaya">
 <meta property="og:type" content="website">
-<link rel="icon" href="images/favicon.png">
+<meta property="og:image" content="/images/hero.jpg">
+<link rel="icon" href="/images/favicon.png">
+<link rel="canonical" href="https://kasepuhan-citorek.netlify.app/">
 <link rel="stylesheet" href="css/style.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+<!-- Structured Data SEO -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Kasepuhan Adat Citorek",
+  "url": "https://kasepuhan-citorek.netlify.app",
+  "description": "Website resmi Kasepuhan Adat Citorek",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Citorek",
+    "addressRegion": "Banten",
+    "addressCountry": "ID"
+  }
+}
+</script>
 </head>
 <body>
 
-<!-- HEADER -->
+<!-- ==================== HEADER ==================== -->
 <header id="header" class="header">
   <div class="container header-inner">
-    <a href="index.html" class="logo">
-      <img src="images/logo.png" alt="Logo Kasepuhan Adat Citorek" onerror="this.style.display='none'">
+    <a href="/" class="logo">
+      <img src="/images/logo.png" alt="Logo Kasepuhan Adat Citorek" onerror="this.style.display='none'">
       <div class="logo-text">
         <strong>KASEPUHAN ADAT</strong>
         <span>CITOREK</span>
       </div>
     </a>
     <nav class="nav" id="nav">
-      <a href="index.html" class="active">Beranda</a>
+      <a href="/" class="active">Beranda</a>
       <a href="profil.html">Profil</a>
       <a href="budaya.html">Budaya</a>
       <a href="pertanian.html">Pertanian</a>
@@ -41,12 +62,12 @@
   </div>
 </header>
 
-<!-- HERO -->
+<!-- ==================== HERO ==================== -->
 <section class="hero" id="hero">
-  <div class="hero-bg" style="background-image:url('images/hero.jpg')"></div>
+  <div class="hero-bg" style="background-image:url('/images/hero.jpg')"></div>
   <div class="hero-overlay"></div>
   <div class="container hero-content">
-    <img src="images/logo.png" alt="Logo" class="hero-logo" onerror="this.style.display='none'">
+    <img src="/images/logo.png" alt="Logo" class="hero-logo" onerror="this.style.display='none'">
     <h1 class="hero-title">KASEPUHAN ADAT CITOREK</h1>
     <p class="hero-tagline">Menjaga Adat, Merawat Alam, Mewariskan Budaya</p>
     <div class="hero-buttons">
@@ -57,11 +78,11 @@
   <div class="hero-scroll">↓</div>
 </section>
 
-<!-- SAMBUTAN -->
+<!-- ==================== SAMBUTAN ==================== -->
 <section class="section" id="sambutan">
   <div class="container sambutan-grid">
     <div class="sambutan-photo">
-      <img src="images/abah.jpg" alt="[Masukkan foto resmi Abah/Ketua Adat]" onerror="this.src='https://via.placeholder.com/500x600/2d5016/ffffff?text=Foto+Abah'">
+      <img src="/images/abah.jpg" alt="[Masukkan foto resmi Abah/Ketua Adat]" onerror="this.src='https://via.placeholder.com/500x600/2d5016/ffffff?text=Foto+Abah'">
     </div>
     <div class="sambutan-text">
       <span class="eyebrow">Sambutan</span>
@@ -75,7 +96,7 @@
   </div>
 </section>
 
-<!-- TENTANG -->
+<!-- ==================== TENTANG ==================== -->
 <section class="section section-alt" id="tentang">
   <div class="container narrow center">
     <span class="eyebrow">Sekilas</span>
@@ -86,17 +107,29 @@
   </div>
 </section>
 
-<!-- STATISTIK -->
+<!-- ==================== STATISTIK ==================== -->
 <section class="section stats-section">
   <div class="container stats-grid">
-    <div class="stat"><div class="stat-num" data-count="0">—</div><div class="stat-label">Tahun Sejarah</div></div>
-    <div class="stat"><div class="stat-num" data-count="0">—</div><div class="stat-label">Wilayah Adat (Ha)</div></div>
-    <div class="stat"><div class="stat-num" data-count="0">—</div><div class="stat-label">Kampung</div></div>
-    <div class="stat"><div class="stat-num" data-count="0">—</div><div class="stat-label">Kegiatan Budaya/Tahun</div></div>
+    <div class="stat">
+      <div class="stat-num" data-count="0">—</div>
+      <div class="stat-label">Tahun Sejarah</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num" data-count="0">—</div>
+      <div class="stat-label">Wilayah Adat (Ha)</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num" data-count="0">—</div>
+      <div class="stat-label">Kampung</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num" data-count="0">—</div>
+      <div class="stat-label">Kegiatan Budaya/Tahun</div>
+    </div>
   </div>
 </section>
 
-<!-- BERITA -->
+<!-- ==================== BERITA ==================== -->
 <section class="section" id="berita">
   <div class="container">
     <div class="section-head">
@@ -112,18 +145,21 @@
   </div>
 </section>
 
-<!-- AGENDA -->
+<!-- ==================== AGENDA ==================== -->
 <section class="section section-alt" id="agenda">
   <div class="container">
     <div class="section-head">
-      <div><span class="eyebrow">Agenda</span><h2>Kegiatan Terdekat</h2></div>
+      <div>
+        <span class="eyebrow">Agenda</span>
+        <h2>Kegiatan Terdekat</h2>
+      </div>
       <a href="informasi.html#agenda" class="link-arrow">Semua Agenda →</a>
     </div>
     <div class="grid-3" id="agenda-list"></div>
   </div>
 </section>
 
-<!-- FILOSOFI -->
+<!-- ==================== FILOSOFI ==================== -->
 <section class="section filosofi-section">
   <div class="container narrow center">
     <span class="eyebrow">Filosofi</span>
@@ -134,18 +170,21 @@
   </div>
 </section>
 
-<!-- GALERI -->
+<!-- ==================== GALERI ==================== -->
 <section class="section" id="galeri">
   <div class="container">
     <div class="section-head">
-      <div><span class="eyebrow">Galeri</span><h2>Dokumentasi</h2></div>
+      <div>
+        <span class="eyebrow">Galeri</span>
+        <h2>Dokumentasi</h2>
+      </div>
       <a href="riset.html#galeri" class="link-arrow">Lihat Semua →</a>
     </div>
     <div class="galeri-grid" id="galeri-home"></div>
   </div>
 </section>
 
-<!-- CTA -->
+<!-- ==================== CTA ==================== -->
 <section class="cta-section">
   <div class="container center">
     <h2>Kenali, Hormati, dan Lestarikan Budaya Kasepuhan</h2>
@@ -157,13 +196,16 @@
   </div>
 </section>
 
-<!-- FOOTER -->
+<!-- ==================== FOOTER ==================== -->
 <footer class="footer">
   <div class="container footer-grid">
     <div>
       <div class="logo footer-logo">
-        <img src="images/logo.png" alt="Logo" onerror="this.style.display='none'">
-        <div class="logo-text"><strong>KASEPUHAN ADAT</strong><span>CITOREK</span></div>
+        <img src="/images/logo.png" alt="Logo" onerror="this.style.display='none'">
+        <div class="logo-text">
+          <strong>KASEPUHAN ADAT</strong>
+          <span>CITOREK</span>
+        </div>
       </div>
       <p class="footer-desc">[Masukkan deskripsi singkat resmi Kasepuhan Adat Citorek di sini.]</p>
     </div>
@@ -203,7 +245,35 @@
   </div>
 </footer>
 
+<!-- ==================== SCRIPTS ==================== -->
 <script src="js/data.js"></script>
 <script src="js/main.js"></script>
+
+<!-- ================================================
+     NETLIFY IDENTITY WIDGET
+     Fungsi: Handle login & reset password admin
+     WAJIB ADA agar admin panel dapat diakses
+     ================================================ -->
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<script>
+  // Handle redirect otomatis setelah login dari Netlify Identity
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+
+  // Handle reset password token yang masuk lewat root URL
+  // (Netlify Identity mengirim token ke /#recovery_token=xxx)
+  if (window.location.hash && window.location.hash.includes("recovery_token=")) {
+    // Widget akan otomatis mendeteksi token dan menampilkan modal reset password
+    // Setelah user set password baru, redirect ke /admin/
+  }
+</script>
+
 </body>
 </html>
