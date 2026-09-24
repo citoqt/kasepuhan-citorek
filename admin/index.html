@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex" />
+  <title>Admin Panel — Kasepuhan Adat Citorek</title>
+  <link rel="icon" href="../images/favicon.png" />
+  <link rel="stylesheet" href="https://unpkg.com/decap-cms@^3.1.0/dist/decap-cms.css" />
+  <style>
+    /* Kustomisasi tampilan admin agar bernuansa Kasepuhan */
+    :root {
+      --hijau-tua: #1f3d1f;
+      --hijau: #2d5016;
+      --emas: #c9a961;
+    }
+    body { font-family: 'Inter', sans-serif; }
+    
+    /* Override warna utama Decap CMS */
+    [class*="ToolbarContainer"] { background: var(--hijau-tua) !important; }
+    [class*="AppHeader"] { background: var(--hijau-tua) !important; border-bottom: 2px solid var(--emas) !important; }
+    [class*="AppHeaderButton"]:hover { background: rgba(201,169,97,.2) !important; }
+    [class*="Sidebar"] { background: #faf8f4 !important; }
+    [class*="SidebarNavLink"]:hover { background: rgba(45,80,22,.08) !important; }
+    [class*="SidebarNavLink"][aria-current="page"] { background: rgba(45,80,22,.15) !important; border-left: 3px solid var(--emas) !important; }
+    [class*="CollectionTop"] { border-bottom: 2px solid #eee !important; }
+    button[class*="Button"][class*="primary"] { background: var(--hijau) !important; }
+    button[class*="Button"][class*="primary"]:hover { background: var(--hijau-tua) !important; }
+    a[class*="Button"][class*="primary"] { background: var(--hijau) !important; }
+    
+    /* Login screen */
+    [class*="AuthenticationPage"] { 
+      background: linear-gradient(135deg, var(--hijau-tua) 0%, var(--hijau) 100%) !important;
+    }
+    [class*="AuthenticationPage"] [class*="Card"] { 
+      box-shadow: 0 20px 60px rgba(0,0,0,.3) !important;
+      border-top: 4px solid var(--emas) !important;
+    }
+    
+    /* Custom branding di header */
+    .kasepuhan-brand {
+      display: flex; align-items: center; gap: 10px;
+      color: #fff; padding: 12px 20px;
+      font-family: 'Playfair Display', serif;
+      font-weight: 700; letter-spacing: 1px;
+    }
+    .kasepuhan-brand img { height: 32px; }
+  </style>
+</head>
+<body>
+  <!-- Mount point untuk Decap CMS -->
+  <div id="nc-root"></div>
+
+  <!-- Decap CMS -->
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <script src="https://unpkg.com/decap-cms@^3.1.0/dist/decap-cms.js"></script>
+
+  <script>
+    // Redirect otomatis setelah login via Netlify Identity
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", user => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
+  </script>
+</body>
+</html>

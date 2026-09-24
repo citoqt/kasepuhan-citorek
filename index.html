@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kasepuhan Adat Citorek — Menjaga Adat, Merawat Alam, Mewariskan Budaya</title>
+<meta name="description" content="Website resmi Kasepuhan Adat Citorek. Informasi sejarah, budaya, tradisi, pertanian, wisata budaya, dan publikasi resmi.">
+<meta property="og:title" content="Kasepuhan Adat Citorek">
+<meta property="og:description" content="Menjaga Adat, Merawat Alam, Mewariskan Budaya">
+<meta property="og:type" content="website">
+<link rel="icon" href="images/favicon.png">
+<link rel="stylesheet" href="css/style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- HEADER -->
+<header id="header" class="header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo">
+      <img src="images/logo.png" alt="Logo Kasepuhan Adat Citorek" onerror="this.style.display='none'">
+      <div class="logo-text">
+        <strong>KASEPUHAN ADAT</strong>
+        <span>CITOREK</span>
+      </div>
+    </a>
+    <nav class="nav" id="nav">
+      <a href="index.html" class="active">Beranda</a>
+      <a href="profil.html">Profil</a>
+      <a href="budaya.html">Budaya</a>
+      <a href="pertanian.html">Pertanian</a>
+      <a href="informasi.html">Informasi</a>
+      <a href="riset.html">Riset</a>
+      <a href="wisata.html">Wisata</a>
+      <a href="kontak.html">Kontak</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-bg" style="background-image:url('images/hero.jpg')"></div>
+  <div class="hero-overlay"></div>
+  <div class="container hero-content">
+    <img src="images/logo.png" alt="Logo" class="hero-logo" onerror="this.style.display='none'">
+    <h1 class="hero-title">KASEPUHAN ADAT CITOREK</h1>
+    <p class="hero-tagline">Menjaga Adat, Merawat Alam, Mewariskan Budaya</p>
+    <div class="hero-buttons">
+      <a href="#tentang" class="btn btn-primary">Jelajahi Kasepuhan</a>
+      <a href="profil.html" class="btn btn-outline">Tentang Kami</a>
+    </div>
+  </div>
+  <div class="hero-scroll">↓</div>
+</section>
+
+<!-- SAMBUTAN -->
+<section class="section" id="sambutan">
+  <div class="container sambutan-grid">
+    <div class="sambutan-photo">
+      <img src="images/abah.jpg" alt="[Masukkan foto resmi Abah/Ketua Adat]" onerror="this.src='https://via.placeholder.com/500x600/2d5016/ffffff?text=Foto+Abah'">
+    </div>
+    <div class="sambutan-text">
+      <span class="eyebrow">Sambutan</span>
+      <h2>[Masukkan nama Abah/Ketua Adat]</h2>
+      <p class="jabatan">[Masukkan jabatan resmi]</p>
+      <blockquote>
+        "[Masukkan sambutan resmi dari Abah/Ketua Adat Kasepuhan Adat Citorek di sini. Sambutan ini dapat diedit melalui Admin Panel.]"
+      </blockquote>
+      <a href="profil.html" class="link-arrow">Selengkapnya →</a>
+    </div>
+  </div>
+</section>
+
+<!-- TENTANG -->
+<section class="section section-alt" id="tentang">
+  <div class="container narrow center">
+    <span class="eyebrow">Sekilas</span>
+    <h2>Tentang Kasepuhan</h2>
+    <p class="lead">
+      [Masukkan ringkasan sejarah dan identitas Kasepuhan Adat Citorek di sini. Konten ini dapat diedit melalui Admin Panel.]
+    </p>
+  </div>
+</section>
+
+<!-- STATISTIK -->
+<section class="section stats-section">
+  <div class="container stats-grid">
+    <div class="stat"><div class="stat-num" data-count="0">—</div><div class="stat-label">Tahun Sejarah</div></div>
+    <div class="stat"><div class="stat-num" data-count="0">—</div><div class="stat-label">Wilayah Adat (Ha)</div></div>
+    <div class="stat"><div class="stat-num" data-count="0">—</div><div class="stat-label">Kampung</div></div>
+    <div class="stat"><div class="stat-num" data-count="0">—</div><div class="stat-label">Kegiatan Budaya/Tahun</div></div>
+  </div>
+</section>
+
+<!-- BERITA -->
+<section class="section" id="berita">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Kabar Terbaru</span>
+        <h2>Berita Kasepuhan</h2>
+      </div>
+      <a href="informasi.html" class="link-arrow">Semua Berita →</a>
+    </div>
+    <div class="grid-3" id="berita-list">
+      <!-- diisi oleh JS -->
+    </div>
+  </div>
+</section>
+
+<!-- AGENDA -->
+<section class="section section-alt" id="agenda">
+  <div class="container">
+    <div class="section-head">
+      <div><span class="eyebrow">Agenda</span><h2>Kegiatan Terdekat</h2></div>
+      <a href="informasi.html#agenda" class="link-arrow">Semua Agenda →</a>
+    </div>
+    <div class="grid-3" id="agenda-list"></div>
+  </div>
+</section>
+
+<!-- FILOSOFI -->
+<section class="section filosofi-section">
+  <div class="container narrow center">
+    <span class="eyebrow">Filosofi</span>
+    <blockquote class="filosofi-quote">
+      "[Masukkan kutipan filosofi/nilai adat Kasepuhan Adat Citorek di sini.]"
+    </blockquote>
+    <p class="filosofi-source">— Pikukuh Kasepuhan Adat Citorek</p>
+  </div>
+</section>
+
+<!-- GALERI -->
+<section class="section" id="galeri">
+  <div class="container">
+    <div class="section-head">
+      <div><span class="eyebrow">Galeri</span><h2>Dokumentasi</h2></div>
+      <a href="riset.html#galeri" class="link-arrow">Lihat Semua →</a>
+    </div>
+    <div class="galeri-grid" id="galeri-home"></div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="container center">
+    <h2>Kenali, Hormati, dan Lestarikan Budaya Kasepuhan</h2>
+    <p>Mari bersama menjaga warisan budaya dan alam Kasepuhan Adat Citorek untuk generasi mendatang.</p>
+    <div class="hero-buttons">
+      <a href="wisata.html" class="btn btn-primary">Kunjungi Kasepuhan</a>
+      <a href="kontak.html" class="btn btn-outline">Hubungi Kami</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container footer-grid">
+    <div>
+      <div class="logo footer-logo">
+        <img src="images/logo.png" alt="Logo" onerror="this.style.display='none'">
+        <div class="logo-text"><strong>KASEPUHAN ADAT</strong><span>CITOREK</span></div>
+      </div>
+      <p class="footer-desc">[Masukkan deskripsi singkat resmi Kasepuhan Adat Citorek di sini.]</p>
+    </div>
+    <div>
+      <h4>Navigasi</h4>
+      <ul>
+        <li><a href="profil.html">Profil</a></li>
+        <li><a href="budaya.html">Budaya</a></li>
+        <li><a href="pertanian.html">Pertanian</a></li>
+        <li><a href="informasi.html">Informasi</a></li>
+        <li><a href="wisata.html">Wisata</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Kontak</h4>
+      <ul>
+        <li>[Masukkan alamat]</li>
+        <li>[Masukkan telepon]</li>
+        <li>[Masukkan email]</li>
+        <li>[Masukkan WhatsApp]</li>
+      </ul>
+    </div>
+    <div>
+      <h4>Media Sosial</h4>
+      <ul>
+        <li><a href="#">YouTube</a></li>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">WhatsApp</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      © <span id="year"></span> Kasepuhan Adat Citorek. Seluruh hak dilindungi.
+    </div>
+  </div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

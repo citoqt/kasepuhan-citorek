@@ -1,0 +1,1084 @@
+Buat sebuah website resmi, profesional, modern, elegan, responsif, cepat, dan mudah dikelola untuk:
+
+# KASEPUHAN ADAT CITOREK
+
+Website harus memiliki nuansa budaya Sunda/Kasepuhan yang kuat, tetapi tetap terlihat modern, resmi, bersih, dan terpercaya. Website ditujukan untuk masyarakat umum, warga adat, wisatawan, peneliti, akademisi, pemerintah, media, serta pihak yang ingin melakukan kerja sama dengan Kasepuhan Adat Citorek.
+
+## 1. KONSEP DESAIN
+
+Gunakan desain yang:
+
+* Profesional dan resmi
+* Elegan tetapi tidak berlebihan
+* Modern dengan sentuhan budaya Sunda/Kasepuhan
+* Bersih dan mudah dibaca
+* Responsif untuk desktop, tablet, dan smartphone
+* Memiliki navigasi yang jelas
+* Mengutamakan foto dokumentasi asli Kasepuhan
+* Menggunakan warna yang terinspirasi dari alam dan budaya, seperti hijau hutan, cokelat tanah, krem, putih, dan aksen emas secukupnya
+* Gunakan tipografi modern yang mudah dibaca
+* Gunakan ornamen budaya secara halus, jangan sampai mengganggu keterbacaan
+* Animasi ringan dan elegan, tidak berlebihan
+* Memiliki tampilan premium seperti website lembaga budaya resmi
+
+Pada halaman beranda gunakan hero section besar berupa foto atau video lanskap Kasepuhan Adat Citorek.
+
+Tambahkan overlay yang elegan dengan:
+"KASEPUHAN ADAT CITOREK"
+"Menjaga Adat, Merawat Alam, Mewariskan Budaya"
+
+Semua teks tersebut harus dapat diedit melalui Admin Panel.
+
+---
+
+# 2. STRUKTUR WEBSITE
+
+## A. BERANDA / HOME
+
+Buat halaman utama dengan bagian:
+
+### Hero Section
+
+* Foto/video background
+* Logo resmi Kasepuhan
+* Nama Kasepuhan Adat Citorek
+* Tagline
+* Tombol "Jelajahi Kasepuhan"
+* Tombol "Tentang Kami"
+
+Semua elemen dapat diedit dari Admin Panel.
+
+### Sambutan
+
+* Foto Abah/Ketua Adat
+* Nama
+* Jabatan
+* Sambutan singkat
+
+Semua dapat diedit dari Admin Panel.
+
+### Sekilas Tentang Kasepuhan
+
+Tampilkan ringkasan sejarah dan identitas Kasepuhan.
+
+### Berita Terbaru
+
+Tampilkan 3–6 berita terbaru.
+
+### Agenda Terdekat
+
+Tampilkan agenda kegiatan adat yang akan datang.
+
+### Filosofi Kasepuhan
+
+Tampilkan kutipan filosofi/nilai adat.
+
+### Galeri
+
+Tampilkan foto/video pilihan.
+
+### Statistik / Informasi Singkat
+
+Contoh:
+
+* Tahun berdiri/sejarah
+* Wilayah adat
+* Jumlah kampung
+* Kegiatan budaya
+
+Nilai statistik harus dapat diedit.
+
+### Call To Action
+
+"Kenali, Hormati, dan Lestarikan Budaya Kasepuhan"
+
+---
+
+# 3. PROFIL KASEPUHAN / TENTANG KAMI
+
+Buat halaman khusus dengan submenu:
+
+### Sejarah & Asal-Usul
+
+* Sejarah berdirinya Kasepuhan
+* Asal-usul
+* Perjalanan sejarah
+* Silsilah leluhur
+* Dokumentasi sejarah
+
+Buat editor konten yang mendukung:
+
+* teks
+* gambar
+* galeri
+* video
+* dokumen
+* caption
+
+### Filosofi & Nilai Adat
+
+* Prinsip hidup
+* Pikukuh
+* Hukum adat
+* Nilai gotong royong
+* Hubungan manusia dengan alam
+* Nilai spiritual dan budaya
+
+### Struktur Kepemimpinan
+
+Tampilkan struktur organisasi/lembaga adat.
+
+Contoh:
+
+* Abah / Ketua Adat
+* Olot
+* Jaro
+* Perangkat lembaga adat lainnya
+
+Setiap profil dapat memiliki:
+
+* Foto
+* Nama
+* Jabatan
+* Biografi
+* Deskripsi
+* Periode/jabatan
+* Kontak jika diperlukan
+
+### Wilayah & Geografi
+
+* Peta wilayah adat
+* Batas wilayah
+* Kampung
+* Lingkungan alam
+* Sungai
+* Gunung
+* Hutan
+* Area penting lainnya
+
+Sediakan integrasi peta yang dapat dikonfigurasi melalui Admin Panel.
+
+---
+
+# 4. KEBUDAYAAN & TRADISI
+
+Buat halaman budaya dengan kategori:
+
+### Upacara Adat
+
+Contoh:
+
+* Seren Taun
+* Nganyaran
+* Ponggokan
+* Upacara adat lainnya
+
+Setiap tradisi memiliki halaman detail:
+
+* Nama tradisi
+* Deskripsi
+* Sejarah
+* Makna
+* Waktu pelaksanaan
+* Tahapan
+* Foto
+* Video
+* Dokumentasi
+
+### Kesenian & Musik
+
+* Alat musik tradisional
+* Tarian
+* Lagu daerah
+* Seni pertunjukan
+* Dokumentasi audio/video
+
+### Arsitektur & Rumah Adat
+
+* Rumah panggung
+* Imah Gede
+* Leuit
+* Struktur bangunan
+* Filosofi arsitektur
+* Foto dan video
+
+### Pakaian & Atribut Adat
+
+* Pakaian adat
+* Totopong
+* Aksesori
+* Makna simbol
+* Penggunaan dalam kegiatan adat
+
+Semua konten harus dapat ditambah, diedit, dihapus, diurutkan, dan dikategorikan melalui Admin Panel.
+
+---
+
+# 5. KETAHANAN PANGAN & SISTEM TANI
+
+Buat halaman khusus mengenai sistem pertanian dan ketahanan pangan Kasepuhan.
+
+### Filosofi Padi
+
+Jelaskan filosofi padi berdasarkan informasi resmi yang diberikan pengelola Kasepuhan.
+
+PENTING:
+Jangan membuat klaim adat secara otomatis apabila belum diberikan sumber/resmi.
+Jika terdapat informasi yang masih berbeda atau bergantung pada aturan Kasepuhan, tampilkan sebagai konten yang dapat dikoreksi melalui Admin Panel.
+
+### Kalender Tani / Pranata Mangsa
+
+Buat tampilan kalender interaktif.
+
+Admin dapat:
+
+* Menambah periode
+* Mengubah nama periode
+* Mengubah deskripsi
+* Menambahkan gambar
+* Menambahkan aktivitas pertanian
+
+### Leuit / Sistem Lumbung
+
+Jelaskan:
+
+* Fungsi Leuit
+* Sistem penyimpanan
+* Pengelolaan cadangan pangan
+* Nilai sosial
+* Dokumentasi
+
+---
+
+# 6. BERITA & AGENDA / INFORMASI
+
+Buat sistem berita seperti CMS profesional.
+
+### Kabar Kasepuhan
+
+Fitur:
+
+* Judul
+* Thumbnail
+* Isi berita
+* Penulis
+* Tanggal
+* Kategori
+* Tag
+* Galeri
+* Video
+* Status draft/published
+* Featured article
+
+### Agenda Kegiatan
+
+Buat kalender agenda.
+
+Setiap agenda memiliki:
+
+* Nama kegiatan
+* Tanggal
+* Waktu
+* Lokasi
+* Deskripsi
+* Foto
+* Penyelenggara
+* Status
+* Informasi tambahan
+
+### Pengumuman
+
+Buat sistem pengumuman resmi.
+
+Admin dapat membuat:
+
+* Pengumuman penting
+* Informasi warga
+* Informasi kegiatan
+* Informasi layanan
+* Informasi kunjungan
+
+Sediakan fitur pin/featured untuk pengumuman penting.
+
+---
+
+# 7. EDUKASI & PUBLIKASI / RISET
+
+### Galeri Foto
+
+Buat galeri profesional dengan:
+
+* Album
+* Kategori
+* Caption
+* Tanggal
+* Lokasi
+* Fotografer
+* Upload multiple images
+
+### Galeri Video
+
+Dukung:
+
+* YouTube
+* Video upload jika diperlukan
+* Thumbnail
+* Judul
+* Deskripsi
+
+### Dokumen & Jurnal
+
+Buat perpustakaan digital.
+
+Kategori:
+
+* Artikel
+* Jurnal
+* Buku
+* Regulasi
+* Penelitian
+* Dokumen adat
+* Publikasi
+* Dokumen lainnya
+
+Fitur:
+
+* Upload PDF
+* Judul
+* Penulis
+* Tahun
+* Kategori
+* Deskripsi
+* Thumbnail/cover
+* Tombol baca
+* Tombol download jika diizinkan
+
+Admin dapat menentukan apakah dokumen:
+
+* Publik
+* Hanya dapat dibaca
+* Dapat diunduh
+
+---
+
+# 8. WISATA BUDAYA / SABA BUDAYA
+
+Buat halaman wisata budaya yang tetap menghormati aturan adat.
+
+### Panduan Pengunjung
+
+Tampilkan:
+
+* Tatakrama
+* Aturan berpakaian
+* Larangan
+* Etika fotografi
+* Etika saat mengikuti upacara
+* Aturan masuk wilayah tertentu
+* Hal yang harus dihormati wisatawan
+
+Tambahkan peringatan:
+
+"Pengunjung wajib menghormati aturan dan ketentuan adat yang berlaku di Kasepuhan Adat Citorek."
+
+Konten harus sepenuhnya dapat diedit oleh Admin.
+
+### Paket Wisata
+
+Buat sistem paket:
+
+* Nama paket
+* Durasi
+* Harga jika ada
+* Fasilitas
+* Aktivitas
+* Pemandu
+* Homestay
+* Galeri
+* Informasi pemesanan
+
+### Lokasi & Rute
+
+* Peta interaktif
+* Titik lokasi Kasepuhan
+* Petunjuk perjalanan
+* Informasi transportasi
+* Titik penting
+* Kontak pemandu
+
+---
+
+# 9. KONTAK
+
+Buat halaman kontak resmi.
+
+### Hubungi Kami
+
+Form:
+
+* Nama
+* Email
+* Nomor WhatsApp/Telepon
+* Keperluan
+* Pesan
+* Lampiran jika diperlukan
+
+Kategori:
+
+* Kerja sama
+* Penelitian
+* Kunjungan
+* Media
+* Wisata budaya
+* Pertanyaan umum
+
+Pesan masuk harus dapat dilihat dari Admin Panel.
+
+### Media Sosial
+
+Sediakan:
+
+* YouTube
+* Instagram
+* Facebook
+* WhatsApp
+* Website resmi lainnya
+
+Semua link dapat diubah dari Admin Panel.
+
+---
+
+# 10. ADMIN PANEL / CMS
+
+INI ADALAH FITUR UTAMA.
+
+Buat Admin Panel yang profesional dan mudah digunakan oleh orang yang tidak mengerti coding.
+
+SEMUA KONTEN WEBSITE HARUS DAPAT DIEDIT DARI ADMIN PANEL.
+
+Admin tidak perlu mengubah kode program.
+
+## Dashboard Admin
+
+Tampilkan:
+
+* Jumlah berita
+* Jumlah agenda
+* Jumlah foto
+* Jumlah video
+* Jumlah dokumen
+* Jumlah pesan
+* Jumlah pengguna/admin
+* Aktivitas terbaru
+
+---
+
+# 11. CONTENT MANAGEMENT
+
+Admin dapat mengelola:
+
+### Homepage
+
+* Hero image/video
+* Hero title
+* Subtitle
+* Button
+* Sambutan
+* Foto Abah
+* Filosofi
+* Berita
+* Agenda
+* Galeri
+* Statistik
+* CTA
+
+### Profil
+
+* Sejarah
+* Silsilah
+* Filosofi
+* Pikukuh
+* Struktur kepemimpinan
+* Wilayah
+* Peta
+
+### Budaya
+
+* Tradisi
+* Upacara
+* Kesenian
+* Musik
+* Arsitektur
+* Rumah adat
+* Pakaian
+* Atribut
+
+### Agrikultur
+
+* Filosofi padi
+* Kalender tani
+* Leuit
+* Sistem pertanian
+
+### Informasi
+
+* Berita
+* Agenda
+* Pengumuman
+
+### Publikasi
+
+* Foto
+* Video
+* Dokumen
+* Jurnal
+
+### Wisata
+
+* Panduan
+* Paket wisata
+* Homestay
+* Pemandu
+* Rute
+
+### Kontak
+
+* Alamat
+* Nomor telepon
+* WhatsApp
+* Email
+* Media sosial
+* Google Maps
+* Jam layanan
+
+---
+
+# 12. WEBSITE BUILDER / CUSTOMIZATION
+
+Admin juga harus dapat mengubah tampilan website tanpa coding.
+
+Sediakan menu:
+
+## Pengaturan Tampilan
+
+Admin dapat mengubah:
+
+* Logo
+* Favicon
+* Warna utama
+* Warna sekunder
+* Font
+* Ukuran font
+* Background
+* Header
+* Footer
+* Menu navigasi
+* Button
+* Hero section
+* Banner
+* Layout section
+* Urutan section
+* Visibility section
+
+Setiap section memiliki opsi:
+
+* Aktif/nonaktif
+* Edit
+* Hapus
+* Duplikat
+* Atur urutan
+
+Gunakan drag & drop jika memungkinkan.
+
+---
+
+# 13. HEADER & NAVIGASI
+
+Header desktop:
+
+LOGO | BERANDA | PROFIL | BUDAYA | PERTANIAN | INFORMASI | RISET | WISATA | KONTAK
+
+Buat dropdown submenu.
+
+Pada mobile gunakan hamburger menu.
+
+Header dapat:
+
+* Sticky
+* Transparan di hero
+* Berubah menjadi solid saat scroll
+
+Semua pengaturan dapat diubah dari Admin Panel.
+
+---
+
+# 14. FOOTER
+
+Footer profesional berisi:
+
+Logo Kasepuhan Adat Citorek
+
+Deskripsi singkat.
+
+Navigasi cepat.
+
+Kontak.
+
+Media sosial.
+
+Alamat.
+
+Peta kecil jika diperlukan.
+
+Copyright:
+
+© [TAHUN] Kasepuhan Adat Citorek. Seluruh hak dilindungi.
+
+Tahun harus otomatis mengikuti tahun sekarang.
+
+Semua isi footer dapat diedit.
+
+---
+
+# 15. SISTEM ADMIN & KEAMANAN
+
+Buat autentikasi admin yang aman.
+
+Minimal role:
+
+### Super Admin
+
+Dapat mengelola seluruh website.
+
+### Editor
+
+Dapat mengelola konten.
+
+### Operator
+
+Dapat mengelola berita, agenda, galeri, dan informasi tertentu.
+
+Gunakan:
+
+* Login aman
+* Password hashing
+* Session management
+* Role-based access control
+* Validasi input
+* Proteksi upload
+* CSRF protection
+* Rate limiting
+* Audit log aktivitas admin
+
+---
+
+# 16. MEDIA LIBRARY
+
+Buat Media Library seperti CMS profesional.
+
+Admin dapat:
+
+* Upload gambar
+* Upload video
+* Upload PDF
+* Membuat folder
+* Search
+* Filter
+* Delete
+* Rename
+* Mengganti file
+* Melihat ukuran file
+* Melihat metadata
+* Menggunakan kembali media yang sudah diupload
+
+Tambahkan optimasi gambar otomatis.
+
+---
+
+# 17. SEO
+
+Website harus SEO friendly.
+
+Admin dapat mengatur setiap halaman:
+
+* Meta title
+* Meta description
+* Slug
+* Featured image
+* Open Graph image
+* Keywords
+* Canonical URL
+
+Buat otomatis:
+
+* Sitemap.xml
+* Robots.txt
+* Structured data/schema jika relevan
+
+Pastikan URL bersih, contoh:
+
+/profil
+/sejarah
+/budaya/seren-taun
+/berita
+/berita/judul-berita
+/agenda
+/wisata
+/kontak
+
+---
+
+# 18. PENCARIAN WEBSITE
+
+Buat fitur search global.
+
+Pengunjung dapat mencari:
+
+* Berita
+* Agenda
+* Tradisi
+* Artikel
+* Dokumen
+* Galeri
+
+Tampilkan hasil pencarian berdasarkan kategori.
+
+---
+
+# 19. MULTIBAHASA
+
+Struktur website harus disiapkan agar dapat mendukung:
+
+* Bahasa Indonesia
+* Bahasa Sunda
+* Bahasa Inggris
+
+Minimal implementasikan Bahasa Indonesia terlebih dahulu, tetapi struktur database/CMS harus siap untuk konten multibahasa.
+
+Admin dapat menerjemahkan setiap konten.
+
+---
+
+# 20. RESPONSIVE DESIGN
+
+Website wajib tampil sempurna pada:
+
+* Desktop
+* Laptop
+* Tablet
+* Smartphone
+
+Perhatikan:
+
+* Typography
+* Spacing
+* Navigation
+* Image ratio
+* Button
+* Form
+* Gallery
+* Tables
+* Map
+
+Tidak boleh ada horizontal scrolling pada smartphone.
+
+---
+
+# 21. PERFORMANCE
+
+Optimalkan website agar cepat.
+
+Gunakan:
+
+* Image optimization
+* Lazy loading
+* WebP/AVIF jika tersedia
+* Responsive image
+* Code splitting
+* Caching
+* Minification
+* Optimasi database
+* Pagination
+
+Target:
+
+* Loading cepat
+* Mobile friendly
+* SEO friendly
+* Core Web Vitals baik
+
+---
+
+# 22. DATABASE
+
+Gunakan database yang terstruktur.
+
+Minimal tabel/collection:
+
+users
+roles
+pages
+page_sections
+site_settings
+menus
+news
+categories
+events
+announcements
+traditions
+arts
+architecture
+clothing
+agriculture
+food_security
+calendar
+leuit
+gallery_albums
+gallery_items
+videos
+documents
+research
+tour_packages
+visitor_guidelines
+locations
+contacts
+social_media
+media
+audit_logs
+
+Relasikan data dengan baik agar mudah dikembangkan.
+
+---
+
+# 23. EDITOR KONTEN
+
+Gunakan rich text editor pada Admin Panel.
+
+Editor harus mendukung:
+
+* Bold
+* Italic
+* Heading
+* List
+* Quote
+* Link
+* Image
+* Video
+* Table
+* Alignment
+* Caption
+* Embed
+
+Admin dapat membuat halaman tanpa coding.
+
+---
+
+# 24. PREVIEW
+
+Setiap perubahan konten harus memiliki:
+
+SAVE DRAFT
+
+PREVIEW
+
+PUBLISH
+
+UNPUBLISH
+
+Admin dapat melihat preview sebelum dipublikasikan.
+
+---
+
+# 25. VERSI & BACKUP
+
+Jika memungkinkan, buat:
+
+* Revision history
+* Restore versi sebelumnya
+* Database backup
+* Export content
+* Import content
+
+Sehingga kesalahan edit dapat dipulihkan.
+
+---
+
+# 26. FORM & PESAN
+
+Semua formulir website harus masuk ke Admin Panel.
+
+Admin dapat:
+
+* Melihat pesan
+* Membaca pesan
+* Menandai sudah dibaca
+* Membalas
+* Menghapus
+* Mengubah status
+
+Tambahkan notifikasi jika ada pesan baru.
+
+---
+
+# 27. MAP
+
+Gunakan peta interaktif untuk lokasi Kasepuhan.
+
+Admin dapat mengubah:
+
+* Latitude
+* Longitude
+* Nama lokasi
+* Deskripsi
+* Marker
+* Rute
+* Titik penting
+
+Jangan memasukkan koordinat atau batas wilayah adat yang sensitif secara otomatis. Data tersebut harus berasal dari administrator/pengelola resmi.
+
+---
+
+# 28. KOMPONEN UI
+
+Buat komponen reusable:
+
+* Navbar
+* Footer
+* Hero
+* Section
+* Card
+* News Card
+* Event Card
+* Gallery
+* Video Card
+* Document Card
+* Profile Card
+* Timeline
+* Accordion
+* Tabs
+* Modal
+* Breadcrumb
+* Pagination
+* Search
+* Filter
+* Map
+* Contact Form
+* CTA
+* Alert
+* Admin Table
+* Admin Form
+* Rich Text Editor
+* Media Picker
+
+---
+
+# 29. DESAIN HALAMAN DETAIL
+
+Setiap halaman detail harus memiliki:
+
+Breadcrumb
+
+Judul
+
+Featured image
+
+Tanggal/kategori jika relevan
+
+Konten
+
+Galeri terkait
+
+Video terkait
+
+Konten terkait
+
+Share button
+
+Navigasi Previous/Next jika relevan
+
+---
+
+# 30. KONTEN AWAL
+
+Isi website dengan konten placeholder yang jelas dan profesional.
+
+JANGAN mengarang fakta sejarah, silsilah, hukum adat, nama tokoh, batas wilayah, ritual, atau informasi sensitif tentang Kasepuhan.
+
+Gunakan placeholder seperti:
+
+"[Masukkan sejarah resmi Kasepuhan di sini]"
+
+"[Masukkan nama Abah/Ketua Adat]"
+
+"[Masukkan foto resmi]"
+
+"[Masukkan batas wilayah berdasarkan data resmi]"
+
+Dengan demikian seluruh informasi dapat diganti oleh Admin setelah website selesai.
+
+---
+
+# 31. IDENTITAS RESMI
+
+Sediakan pengaturan identitas website:
+
+Nama:
+Kasepuhan Adat Citorek
+
+Logo:
+Upload melalui Admin Panel.
+
+Favicon:
+Upload melalui Admin Panel.
+
+Tagline:
+Dapat diedit.
+
+Deskripsi resmi:
+Dapat diedit.
+
+Alamat:
+Dapat diedit.
+
+Nomor telepon:
+Dapat diedit.
+
+Email:
+Dapat diedit.
+
+WhatsApp:
+Dapat diedit.
+
+Media sosial:
+Dapat diedit.
+
+---
+
+# 32. HASIL AKHIR
+
+Hasil akhir harus berupa website yang terasa seperti portal resmi lembaga adat, bukan template blog biasa.
+
+Prioritas:
+
+1. Profesional
+2. Resmi
+3. Mudah digunakan
+4. Mudah dikelola
+5. Cepat
+6. Responsif
+7. Aman
+8. SEO friendly
+9. Memiliki CMS/Admin Panel lengkap
+10. Seluruh konten dan tampilan dapat diedit
+
+Buat desain frontend dan backend yang konsisten.
+
+Jangan membuat Admin Panel sebagai fitur tambahan sederhana. Admin Panel harus menjadi bagian utama dari sistem.
+
+PRINSIP UTAMA:
+
+"Jika ada teks, gambar, video, menu, section, tombol, link, berita, agenda, dokumen, kontak, atau elemen tampilan yang kemungkinan akan berubah di masa depan, buat agar elemen tersebut dapat diedit melalui Admin Panel."
+
+Jangan hard-code konten yang seharusnya dikelola oleh administrator.
+
+Buat sistem yang mudah dikembangkan di masa depan dan siap digunakan sebagai website resmi Kasepuhan Adat Citorek.

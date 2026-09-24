@@ -1,0 +1,593 @@
+# ============================================================
+# KONFIGURASI ADMIN PANEL
+# Kasepuhan Adat Citorek
+# ============================================================
+
+backend:
+  name: git-gateway
+  branch: main   # Ganti jika branch utama Anda bernama 'master'
+  commit_messages:
+    create: 'Tambah {{collection}} "{{slug}}" oleh {{author}}'
+    update: 'Update {{collection}} "{{slug}}" oleh {{author}}'
+    delete: 'Hapus {{collection}} "{{slug}}" oleh {{author}}'
+    uploadMedia: 'Upload media "{{path}}" oleh {{author}}'
+    deleteMedia: 'Hapus media "{{path}}" oleh {{author}}'
+
+# Bahasa default Indonesia
+locale: 'id'
+
+# Media disimpan di folder /images
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+# Aktifkan editorial workflow (draft → review → publish)
+# Hapus atau set false jika tidak ingin alur review
+publish_mode: editorial_workflow
+
+# Tampilkan preview link ke website
+site_url: https://kasepuhan-citorek.netlify.app  # Ganti dengan domain Anda
+display_url: https://kasepuhan-citorek.netlify.app
+logo_url: /images/logo.png
+
+# ============================================================
+# KOLEKSI KONTEN
+# ============================================================
+collections:
+
+  # ----------------------------------------------------------
+  # 1. BERITA
+  # ----------------------------------------------------------
+  - name: "berita"
+    label: "📰 Berita & Kabar Kasepuhan"
+    label_singular: "Berita"
+    folder: "content/berita"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    preview_path: "informasi/{{slug}}"
+    sortable_fields: ['tanggal', 'judul']
+    fields:
+      - { label: "Judul Berita", name: "judul", widget: "string" }
+      - { label: "Slug URL", name: "slug", widget: "string", required: false, hint: "Kosongkan untuk otomatis" }
+      - { label: "Tanggal", name: "tanggal", widget: "datetime", format: "YYYY-MM-DD", date_format: "DD MMMM YYYY", time_format: false }
+      - label: "Kategori"
+        name: "kategori"
+        widget: "select"
+        options: ["Kabar Kasepuhan", "Budaya", "Pertanian", "Adat", "Pengumuman", "Wisata", "Riset", "Kerja Sama"]
+        default: "Kabar Kasepuhan"
+      - { label: "Penulis", name: "penulis", widget: "string", default: "Admin Kasepuhan" }
+      - { label: "Thumbnail / Featured Image", name: "thumbnail", widget: "image", choose_url: true }
+      - { label: "Ringkasan Singkat", name: "ringkasan", widget: "text", hint: "1-2 kalimat untuk tampilan kartu berita" }
+      - { label: "Isi Berita", name: "body", widget: "markdown", hint: "Gunakan toolbar untuk format teks, gambar, video, tabel" }
+      - { label: "Tag", name: "tags", widget: "list", required: false, default: [] }
+      - label: "Status"
+        name: "status"
+        widget: "select"
+        options: ["draft", "published"]
+        default: "draft"
+      - { label: "Featured (Tampil di Beranda)", name: "featured", widget: "boolean", default: false }
+      - label: "SEO"
+        name: "seo"
+        widget: "object"
+        collapsed: true
+        required: false
+        fields:
+          - { label: "Meta Title", name: "meta_title", widget: "string", required: false }
+          - { label: "Meta Description", name: "meta_description", widget: "text", required: false }
+          - { label: "Keywords", name: "keywords", widget: "string", required: false }
+
+  # ----------------------------------------------------------
+  # 2. AGENDA
+  # ----------------------------------------------------------
+  - name: "agenda"
+    label: "📅 Agenda Kegiatan"
+    label_singular: "Agenda"
+    folder: "content/agenda"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    sortable_fields: ['tanggal', 'nama']
+    fields:
+      - { label: "Nama Kegiatan", name: "nama", widget: "string" }
+      - { label: "Tanggal Mulai", name: "tanggal_mulai", widget: "datetime", format: "YYYY-MM-DD", date_format: "DD MMMM YYYY", time_format: false }
+      - { label: "Tanggal Selesai", name: "tanggal_selesai", widget: "datetime", format: "YYYY-MM-DD", date_format: "DD MMMM YYYY", time_format: false, required: false }
+      - { label: "Waktu", name: "waktu", widget: "string", required: false, hint: "Contoh: 08.00 - 17.00 WIB" }
+      - { label: "Lokasi", name: "lokasi", widget: "string" }
+      - { label: "Penyelenggara", name: "penyelenggara", widget: "string", default: "Kasepuhan Adat Citorek" }
+      - { label: "Deskripsi Kegiatan", name: "body", widget: "markdown" }
+      - { label: "Foto Kegiatan", name: "foto", widget: "image", required: false }
+      - label: "Status"
+        name: "status"
+        widget: "select"
+        options: ["Akan Datang", "Berlangsung", "Selesai", "Dibatalkan"]
+        default: "Akan Datang"
+      - { label: "Informasi Tambahan", name: "info_tambahan", widget: "text", required: false }
+
+  # ----------------------------------------------------------
+  # 3. PENGUMUMAN
+  # ----------------------------------------------------------
+  - name: "pengumuman"
+    label: "📢 Pengumuman Resmi"
+    label_singular: "Pengumuman"
+    folder: "content/pengumuman"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Judul Pengumuman", name: "judul", widget: "string" }
+      - { label: "Tanggal", name: "tanggal", widget: "datetime", format: "YYYY-MM-DD", date_format: "DD MMMM YYYY", time_format: false }
+      - label: "Prioritas"
+        name: "prioritas"
+        widget: "select"
+        options: ["Normal", "Penting", "Sangat Penting"]
+        default: "Normal"
+      - { label: "Isi Pengumuman", name: "body", widget: "markdown" }
+      - { label: "Pin di Beranda", name: "pinned", widget: "boolean", default: false }
+      - { label: "Berlaku Sampai", name: "berlaku_sampai", widget: "datetime", required: false, format: "YYYY-MM-DD", time_format: false }
+
+  # ----------------------------------------------------------
+  # 4. PROFIL — SEJARAH
+  # ----------------------------------------------------------
+  - name: "profil_sejarah"
+    label: "🏛️ Profil — Sejarah & Asal-Usul"
+    label_singular: "Sejarah"
+    folder: "content/profil"
+    create: false
+    fields:
+      - { label: "Judul Halaman", name: "judul", widget: "string", default: "Sejarah & Asal-Usul" }
+      - { label: "Featured Image", name: "featured_image", widget: "image", required: false }
+      - { label: "Sejarah Berdirinya Kasepuhan", name: "body", widget: "markdown" }
+      - label: "Silsilah Leluhur"
+        name: "silsilah"
+        widget: "list"
+        required: false
+        fields:
+          - { label: "Nama", name: "nama", widget: "string" }
+          - { label: "Periode", name: "periode", widget: "string" }
+          - { label: "Keterangan", name: "keterangan", widget: "text", required: false }
+          - { label: "Foto", name: "foto", widget: "image", required: false }
+      - label: "Dokumentasi Sejarah"
+        name: "dokumentasi"
+        widget: "list"
+        required: false
+        fields:
+          - { label: "Gambar", name: "gambar", widget: "image" }
+          - { label: "Caption", name: "caption", widget: "string" }
+
+  # ----------------------------------------------------------
+  # 5. PROFIL — FILOSOFI
+  # ----------------------------------------------------------
+  - name: "profil_filosofi"
+    label: "🌿 Profil — Filosofi & Nilai Adat"
+    label_singular: "Filosofi"
+    folder: "content/profil"
+    create: false
+    fields:
+      - { label: "Judul Halaman", name: "judul", widget: "string", default: "Filosofi & Nilai Adat" }
+      - { label: "Kutipan Filosofi Utama", name: "kutipan", widget: "text" }
+      - { label: "Sumber Kutipan", name: "sumber", widget: "string", default: "Pikukuh Kasepuhan Adat Citorek" }
+      - { label: "Penjelasan Filosofi", name: "body", widget: "markdown" }
+      - label: "Nilai-Nilai Adat"
+        name: "nilai"
+        widget: "list"
+        fields:
+          - { label: "Nama Nilai", name: "nama", widget: "string" }
+          - { label: "Deskripsi", name: "deskripsi", widget: "text" }
+          - { label: "Ikon (emoji)", name: "ikon", widget: "string", required: false }
+
+  # ----------------------------------------------------------
+  # 6. PROFIL — STRUKTUR KEPEMIMPINAN
+  # ----------------------------------------------------------
+  - name: "struktur"
+    label: "👥 Profil — Struktur Kepemimpinan"
+    label_singular: "Pejabat Adat"
+    folder: "content/struktur"
+    create: true
+    slug: "{{slug}}"
+    identifier_field: "nama"
+    fields:
+      - { label: "Nama Lengkap", name: "nama", widget: "string" }
+      - { label: "Jabatan", name: "jabatan", widget: "string", hint: "Contoh: Abah, Olot, Jaro, dll." }
+      - { label: "Foto Resmi", name: "foto", widget: "image" }
+      - { label: "Biografi", name: "biografi", widget: "markdown" }
+      - { label: "Periode Jabatan", name: "periode", widget: "string", required: false }
+      - { label: "Kontak (opsional)", name: "kontak", widget: "string", required: false }
+      - { label: "Urutan Tampil", name: "urutan", widget: "number", default: 99 }
+
+  # ----------------------------------------------------------
+  # 7. PROFIL — WILAYAH & GEOGRAFI
+  # ----------------------------------------------------------
+  - name: "wilayah"
+    label: "🗺️ Profil — Wilayah & Geografi"
+    label_singular: "Wilayah"
+    folder: "content/wilayah"
+    create: false
+    fields:
+      - { label: "Judul Halaman", name: "judul", widget: "string", default: "Wilayah & Geografi" }
+      - { label: "Deskripsi Wilayah Adat", name: "body", widget: "markdown" }
+      - { label: "Peta (Embed URL)", name: "peta_embed", widget: "string", required: false, hint: "URL embed Google Maps" }
+      - label: "Kampung-Kampung"
+        name: "kampung"
+        widget: "list"
+        required: false
+        fields:
+          - { label: "Nama Kampung", name: "nama", widget: "string" }
+          - { label: "Deskripsi", name: "deskripsi", widget: "text" }
+          - { label: "Latitude", name: "lat", widget: "string", required: false }
+          - { label: "Longitude", name: "lng", widget: "string", required: false }
+      - label: "Batas Wilayah"
+        name: "batas"
+        widget: "object"
+        required: false
+        fields:
+          - { label: "Utara", name: "utara", widget: "string" }
+          - { label: "Selatan", name: "selatan", widget: "string" }
+          - { label: "Timur", name: "timur", widget: "string" }
+          - { label: "Barat", name: "barat", widget: "string" }
+
+  # ----------------------------------------------------------
+  # 8. BUDAYA — UPACARA ADAT
+  # ----------------------------------------------------------
+  - name: "upacara"
+    label: "🎭 Budaya — Upacara Adat"
+    label_singular: "Upacara"
+    folder: "content/budaya/upacara"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Nama Upacara", name: "nama", widget: "string", hint: "Contoh: Seren Taun, Nganyaran, Ponggokan" }
+      - { label: "Thumbnail", name: "thumbnail", widget: "image" }
+      - { label: "Ringkasan", name: "ringkasan", widget: "text" }
+      - { label: "Sejarah", name: "sejarah", widget: "markdown" }
+      - { label: "Makna", name: "makna", widget: "markdown" }
+      - { label: "Waktu Pelaksanaan", name: "waktu", widget: "string" }
+      - label: "Tahapan Pelaksanaan"
+        name: "tahapan"
+        widget: "list"
+        required: false
+        fields:
+          - { label: "Nama Tahapan", name: "nama", widget: "string" }
+          - { label: "Deskripsi", name: "deskripsi", widget: "text" }
+      - label: "Galeri Foto"
+        name: "galeri"
+        widget: "list"
+        required: false
+        fields:
+          - { label: "Gambar", name: "gambar", widget: "image" }
+          - { label: "Caption", name: "caption", widget: "string", required: false }
+      - { label: "Video (URL YouTube)", name: "video", widget: "string", required: false }
+
+  # ----------------------------------------------------------
+  # 9. BUDAYA — KESENIAN & MUSIK
+  # ----------------------------------------------------------
+  - name: "kesenian"
+    label: "🎵 Budaya — Kesenian & Musik"
+    label_singular: "Kesenian"
+    folder: "content/budaya/kesenian"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Nama Kesenian", name: "nama", widget: "string" }
+      - label: "Kategori"
+        name: "kategori"
+        widget: "select"
+        options: ["Alat Musik", "Tarian", "Lagu Daerah", "Seni Pertunjukan", "Lainnya"]
+      - { label: "Thumbnail", name: "thumbnail", widget: "image" }
+      - { label: "Deskripsi", name: "body", widget: "markdown" }
+      - { label: "Video (URL YouTube)", name: "video", widget: "string", required: false }
+      - { label: "Audio (URL)", name: "audio", widget: "string", required: false }
+
+  # ----------------------------------------------------------
+  # 10. BUDAYA — ARSITEKTUR
+  # ----------------------------------------------------------
+  - name: "arsitektur"
+    label: "🏠 Budaya — Arsitektur & Rumah Adat"
+    label_singular: "Arsitektur"
+    folder: "content/budaya/arsitektur"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Nama Bangunan", name: "nama", widget: "string", hint: "Contoh: Rumah Panggung, Imah Gede, Leuit" }
+      - { label: "Thumbnail", name: "thumbnail", widget: "image" }
+      - { label: "Deskripsi", name: "body", widget: "markdown" }
+      - { label: "Filosofi Arsitektur", name: "filosofi", widget: "markdown", required: false }
+      - label: "Galeri"
+        name: "galeri"
+        widget: "list"
+        required: false
+        fields:
+          - { label: "Gambar", name: "gambar", widget: "image" }
+          - { label: "Caption", name: "caption", widget: "string", required: false }
+
+  # ----------------------------------------------------------
+  # 11. BUDAYA — PAKAIAN ADAT
+  # ----------------------------------------------------------
+  - name: "pakaian"
+    label: "👘 Budaya — Pakaian & Atribut Adat"
+    label_singular: "Pakaian Adat"
+    folder: "content/budaya/pakaian"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Nama Pakaian/Atribut", name: "nama", widget: "string" }
+      - { label: "Thumbnail", name: "thumbnail", widget: "image" }
+      - { label: "Deskripsi", name: "body", widget: "markdown" }
+      - { label: "Makna Simbol", name: "makna", widget: "markdown", required: false }
+      - { label: "Penggunaan dalam Kegiatan Adat", name: "penggunaan", widget: "markdown", required: false }
+
+  # ----------------------------------------------------------
+  # 12. PERTANIAN — FILOSOFI PADI
+  # ----------------------------------------------------------
+  - name: "filosofi_padi"
+    label: "🌾 Pertanian — Filosofi Padi"
+    label_singular: "Filosofi Padi"
+    folder: "content/pertanian"
+    create: false
+    fields:
+      - { label: "Judul", name: "judul", widget: "string", default: "Filosofi Padi" }
+      - { label: "Konten", name: "body", widget: "markdown", hint: "Jangan membuat klaim adat otomatis. Isi berdasarkan data resmi dari pengelola Kasepuhan." }
+
+  # ----------------------------------------------------------
+  # 13. PERTANIAN — KALENDER TANI
+  # ----------------------------------------------------------
+  - name: "kalender_tani"
+    label: "📆 Pertanian — Kalender Tani / Pranata Mangsa"
+    label_singular: "Periode Tani"
+    folder: "content/pertanian/kalender"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Nama Periode", name: "nama", widget: "string" }
+      - { label: "Rentang Waktu", name: "rentang", widget: "string", hint: "Contoh: Bulan 1-2, atau tanggal spesifik" }
+      - { label: "Deskripsi", name: "deskripsi", widget: "text" }
+      - { label: "Gambar Ilustrasi", name: "gambar", widget: "image", required: false }
+      - label: "Aktivitas Pertanian"
+        name: "aktivitas"
+        widget: "list"
+        required: false
+        fields:
+          - { label: "Nama Aktivitas", name: "nama", widget: "string" }
+          - { label: "Deskripsi", name: "deskripsi", widget: "text", required: false }
+
+  # ----------------------------------------------------------
+  # 14. PERTANIAN — LEUIT
+  # ----------------------------------------------------------
+  - name: "leuit"
+    label: "🏚️ Pertanian — Leuit / Lumbung"
+    label_singular: "Leuit"
+    folder: "content/pertanian"
+    create: false
+    fields:
+      - { label: "Judul", name: "judul", widget: "string", default: "Leuit — Sistem Lumbung Pangan" }
+      - { label: "Fungsi Leuit", name: "fungsi", widget: "markdown" }
+      - { label: "Sistem Penyimpanan", name: "penyimpanan", widget: "markdown" }
+      - { label: "Pengelolaan Cadangan Pangan", name: "pengelolaan", widget: "markdown" }
+      - { label: "Nilai Sosial", name: "nilai_sosial", widget: "markdown" }
+      - label: "Dokumentasi"
+        name: "dokumentasi"
+        widget: "list"
+        required: false
+        fields:
+          - { label: "Gambar", name: "gambar", widget: "image" }
+          - { label: "Caption", name: "caption", widget: "string", required: false }
+
+  # ----------------------------------------------------------
+  # 15. GALERI FOTO
+  # ----------------------------------------------------------
+  - name: "galeri"
+    label: "🖼️ Galeri Foto"
+    label_singular: "Album Galeri"
+    folder: "content/galeri"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Judul Album", name: "judul", widget: "string" }
+      - { label: "Tanggal", name: "tanggal", widget: "datetime", format: "YYYY-MM-DD", date_format: "DD MMMM YYYY", time_format: false }
+      - label: "Kategori"
+        name: "kategori"
+        widget: "select"
+        options: ["Upacara Adat", "Kesenian", "Arsitektur", "Pertanian", "Alam", "Kegiatan", "Lainnya"]
+      - { label: "Lokasi", name: "lokasi", widget: "string", required: false }
+      - { label: "Fotografer", name: "fotografer", widget: "string", required: false }
+      - { label: "Deskripsi Album", name: "deskripsi", widget: "text", required: false }
+      - label: "Foto-Foto"
+        name: "foto"
+        widget: "list"
+        fields:
+          - { label: "Gambar", name: "gambar", widget: "image" }
+          - { label: "Caption", name: "caption", widget: "string", required: false }
+
+  # ----------------------------------------------------------
+  # 16. GALERI VIDEO
+  # ----------------------------------------------------------
+  - name: "video"
+    label: "🎬 Galeri Video"
+    label_singular: "Video"
+    folder: "content/video"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Judul Video", name: "judul", widget: "string" }
+      - { label: "URL YouTube", name: "youtube_url", widget: "string", hint: "Contoh: https://www.youtube.com/watch?v=XXXXX" }
+      - { label: "Thumbnail", name: "thumbnail", widget: "image", required: false }
+      - { label: "Deskripsi", name: "deskripsi", widget: "text", required: false }
+      - { label: "Tanggal Upload", name: "tanggal", widget: "datetime", format: "YYYY-MM-DD", date_format: "DD MMMM YYYY", time_format: false }
+
+  # ----------------------------------------------------------
+  # 17. DOKUMEN & PUBLIKASI
+  # ----------------------------------------------------------
+  - name: "dokumen"
+    label: "📚 Dokumen & Publikasi"
+    label_singular: "Dokumen"
+    folder: "content/dokumen"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Judul Dokumen", name: "judul", widget: "string" }
+      - label: "Kategori"
+        name: "kategori"
+        widget: "select"
+        options: ["Artikel", "Jurnal", "Buku", "Regulasi", "Penelitian", "Dokumen Adat", "Publikasi", "Lainnya"]
+      - { label: "Penulis", name: "penulis", widget: "string" }
+      - { label: "Tahun", name: "tahun", widget: "string" }
+      - { label: "Deskripsi", name: "deskripsi", widget: "text" }
+      - { label: "Cover", name: "cover", widget: "image", required: false }
+      - { label: "Upload PDF", name: "file_pdf", widget: "file", required: false }
+      - label: "Akses Dokumen"
+        name: "akses"
+        widget: "select"
+        options:
+          - { label: "Publik (Bisa dibaca & diunduh)", value: "public" }
+          - { label: "Hanya Baca (Tidak dapat diunduh)", value: "readonly" }
+          - { label: "Tertutup", value: "private" }
+        default: "public"
+
+  # ----------------------------------------------------------
+  # 18. PAKET WISATA
+  # ----------------------------------------------------------
+  - name: "paket_wisata"
+    label: "🧭 Wisata — Paket Wisata Budaya"
+    label_singular: "Paket Wisata"
+    folder: "content/wisata/paket"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Nama Paket", name: "nama", widget: "string" }
+      - { label: "Thumbnail", name: "thumbnail", widget: "image" }
+      - { label: "Durasi", name: "durasi", widget: "string", hint: "Contoh: 2 Hari 1 Malam" }
+      - { label: "Harga", name: "harga", widget: "string", required: false }
+      - { label: "Deskripsi Paket", name: "body", widget: "markdown" }
+      - { label: "Fasilitas", name: "fasilitas", widget: "list", required: false }
+      - { label: "Aktivitas", name: "aktivitas", widget: "list", required: false }
+      - { label: "Pemandu", name: "pemandu", widget: "string", required: false }
+      - { label: "Homestay", name: "homestay", widget: "string", required: false }
+      - label: "Galeri"
+        name: "galeri"
+        widget: "list"
+        required: false
+        fields:
+          - { label: "Gambar", name: "gambar", widget: "image" }
+
+  # ----------------------------------------------------------
+  # 19. PANDUAN PENGUNJUNG
+  # ----------------------------------------------------------
+  - name: "panduan_wisata"
+    label: "📋 Wisata — Panduan Pengunjung"
+    label_singular: "Panduan"
+    folder: "content/wisata"
+    create: false
+    fields:
+      - { label: "Judul", name: "judul", widget: "string", default: "Panduan Pengunjung" }
+      - { label: "Peringatan Wajib", name: "peringatan", widget: "text", default: "Pengunjung wajib menghormati aturan dan ketentuan adat yang berlaku di Kasepuhan Adat Citorek." }
+      - { label: "Tatakrama", name: "tatakrama", widget: "markdown" }
+      - { label: "Aturan Berpakaian", name: "pakaian", widget: "markdown" }
+      - { label: "Larangan", name: "larangan", widget: "markdown" }
+      - { label: "Etika Fotografi", name: "etika_foto", widget: "markdown" }
+      - { label: "Etika Saat Upacara", name: "etika_upacara", widget: "markdown" }
+      - { label: "Aturan Masuk Wilayah Tertentu", name: "aturan_wilayah", widget: "markdown" }
+
+  # ----------------------------------------------------------
+  # 20. HOMEPAGE SETTINGS
+  # ----------------------------------------------------------
+  - name: "homepage"
+    label: "🏠 Pengaturan Beranda"
+    label_singular: "Beranda"
+    files:
+      - name: "hero"
+        label: "Hero Section"
+        file: "content/pages/homepage.json"
+        fields:
+          - { label: "Hero Image/Video", name: "hero_image", widget: "image" }
+          - { label: "Hero Title", name: "hero_title", widget: "string", default: "KASEPUHAN ADAT CITOREK" }
+          - { label: "Hero Subtitle / Tagline", name: "hero_subtitle", widget: "string", default: "Menjaga Adat, Merawat Alam, Mewariskan Budaya" }
+          - { label: "Tombol 1 — Teks", name: "btn1_text", widget: "string", default: "Jelajahi Kasepuhan" }
+          - { label: "Tombol 1 — Link", name: "btn1_link", widget: "string", default: "#tentang" }
+          - { label: "Tombol 2 — Teks", name: "btn2_text", widget: "string", default: "Tentang Kami" }
+          - { label: "Tombol 2 — Link", name: "btn2_link", widget: "string", default: "profil.html" }
+
+      - name: "sambutan"
+        label: "Sambutan Abah/Ketua Adat"
+        file: "content/pages/sambutan.json"
+        fields:
+          - { label: "Foto Abah", name: "foto", widget: "image" }
+          - { label: "Nama", name: "nama", widget: "string", default: "[Masukkan nama Abah/Ketua Adat]" }
+          - { label: "Jabatan", name: "jabatan", widget: "string", default: "Abah Kasepuhan Adat Citorek" }
+          - { label: "Sambutan", name: "sambutan", widget: "text" }
+
+      - name: "statistik"
+        label: "Statistik"
+        file: "content/pages/statistik.json"
+        fields:
+          - label: "Item Statistik"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "Nilai", name: "nilai", widget: "string" }
+              - { label: "Label", name: "label", widget: "string" }
+
+      - name: "filosofi_home"
+        label: "Filosofi Beranda"
+        file: "content/pages/filosofi.json"
+        fields:
+          - { label: "Kutipan", name: "kutipan", widget: "text" }
+          - { label: "Sumber", name: "sumber", widget: "string", default: "Pikukuh Kasepuhan Adat Citorek" }
+
+      - name: "cta"
+        label: "Call To Action"
+        file: "content/pages/cta.json"
+        fields:
+          - { label: "Judul CTA", name: "judul", widget: "string", default: "Kenali, Hormati, dan Lestarikan Budaya Kasepuhan" }
+          - { label: "Deskripsi", name: "deskripsi", widget: "text" }
+          - { label: "Tombol 1 — Teks", name: "btn1_text", widget: "string", default: "Kunjungi Kasepuhan" }
+          - { label: "Tombol 1 — Link", name: "btn1_link", widget: "string", default: "wisata.html" }
+          - { label: "Tombol 2 — Teks", name: "btn2_text", widget: "string", default: "Hubungi Kami" }
+          - { label: "Tombol 2 — Link", name: "btn2_link", widget: "string", default: "kontak.html" }
+
+  # ----------------------------------------------------------
+  # 21. IDENTITAS & KONTAK WEBSITE
+  # ----------------------------------------------------------
+  - name: "settings"
+    label: "⚙️ Pengaturan Website"
+    files:
+      - name: "identitas"
+        label: "Identitas & Kontak"
+        file: "content/pages/identitas.json"
+        fields:
+          - { label: "Nama Website", name: "nama", widget: "string", default: "Kasepuhan Adat Citorek" }
+          - { label: "Logo", name: "logo", widget: "image" }
+          - { label: "Favicon", name: "favicon", widget: "image" }
+          - { label: "Tagline", name: "tagline", widget: "string", default: "Menjaga Adat, Merawat Alam, Mewariskan Budaya" }
+          - { label: "Deskripsi Resmi", name: "deskripsi", widget: "text" }
+          - { label: "Alamat", name: "alamat", widget: "text" }
+          - { label: "Telepon", name: "telepon", widget: "string" }
+          - { label: "Email", name: "email", widget: "string" }
+          - { label: "WhatsApp", name: "whatsapp", widget: "string" }
+          - { label: "Google Maps Embed URL", name: "maps_embed", widget: "string", required: false }
+          - { label: "Jam Layanan", name: "jam_layanan", widget: "string" }
+
+      - name: "sosmed"
+        label: "Media Sosial"
+        file: "content/pages/sosmed.json"
+        fields:
+          - label: "Daftar Media Sosial"
+            name: "items"
+            widget: "list"
+            fields:
+              - label: "Platform"
+                name: "platform"
+                widget: "select"
+                options: ["YouTube", "Instagram", "Facebook", "WhatsApp", "Twitter/X", "TikTok", "Website Lain"]
+              - { label: "URL", name: "url", widget: "string" }
+
+      - name: "tampilan"
+        label: "Pengaturan Tampilan"
+        file: "content/pages/tampilan.json"
+        fields:
+          - { label: "Warna Utama", name: "warna_utama", widget: "color", default: "#2d5016" }
+          - { label: "Warna Sekunder", name: "warna_sekunder", widget: "color", default: "#c9a961" }
+          - { label: "Warna Latar", name: "warna_latar", widget: "color", default: "#ffffff" }
+          - { label: "Footer Text", name: "footer_text", widget: "text", default: "Website resmi Kasepuhan Adat Citorek." }
+          - label: "Section Beranda (urutan & visibilitas)"
+            name: "sections"
+            widget: "list"
+            fields:
+              - { label: "Nama Section", name: "nama", widget: "string" }
+              - { label: "Aktif", name: "aktif", widget: "boolean", default: true }
+              - { label: "Urutan", name: "urutan", widget: "number", default: 1 }
